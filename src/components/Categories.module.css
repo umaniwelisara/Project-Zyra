@@ -1,0 +1,10 @@
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg--secondary);
+  height: 160px;
+  padding: 16px 10rem;
+  gap: 16px;
+}

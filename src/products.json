@@ -1,0 +1,233 @@
+{
+  "categories": [
+    {
+      "name": "Hot Sale",
+      "id": "hot-sale",
+      "products": [
+        {
+          "name": "Hoodie",
+          "price": "35.00 EUR",
+          "originalPrice": "43.75 EUR",
+          "discount": "20% Off",
+          "colors": ["#020817", "#EA8787", "#83B1D9"],
+          "image": "products/hoodie.jpg",
+          "tag": "Special Price",
+          "ecoFriendly": false
+        },
+        {
+          "name": "Round Neck Sweatshirt",
+          "price": "27.50 EUR",
+          "originalPrice": "25.00 EUR",
+          "discount": "10% Off",
+          "colors": ["#BBBFA8", "#1A1A1A", "#D1CECE"],
+          "image": "products/round_neck_sweatshirt.jpg",
+          "tag": "Special Price",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Basic Jogger Trousers",
+          "price": "40.00 EUR",
+          "originalPrice": "44.00 EUR",
+          "discount": "10% Off",
+          "colors": ["#EBEAE5", "#D97777"],
+          "image": "products/basic_jogger_trousers.jpg",
+          "tag": "Festive Offers",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Compact Sweatshirt",
+          "price": "50.00 EUR",
+          "originalPrice": "60.00 EUR",
+          "discount": "20% Off",
+          "colors": ["#161616", "#A4B9A6", "#FCBCBC", "#D3BD81"],
+          "image": "products/compact_sweatshirt.jpg",
+          "tag": "Festive Offers",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Velvet Midi Dress",
+          "price": "60.00 EUR",
+          "originalPrice": "70.00 EUR",
+          "discount": "15% Off",
+          "colors": ["#040404", "#FFE4E4", "#F3F2F2"],
+          "image": "products/velvet_midi_dress.jpg",
+          "tag": "Festive Offers",
+          "ecoFriendly": false
+        }
+      ]
+    },
+    {
+      "name": "Shop by Size",
+      "id": "shop-by-size",
+      "hasSubCategories": true,
+      "products": [
+        {
+          "name": "Plus Size",
+          "image": "shop-by-size/plus-size.jpg"
+        },
+        {
+          "name": "Petite",
+          "image": "shop-by-size/petite.jpg"
+        },
+        {
+          "name": "Tall",
+          "image": "shop-by-size/tall.jpg"
+        },
+        {
+          "name": "Maternity",
+          "image": "shop-by-size/maternity.jpg"
+        }
+      ],
+      "customStyles": {
+        "justifyContent": "center",
+        "gap": "80px"
+      }
+    },
+    {
+      "name": "Shop by Occasion",
+      "id": "shop-by-occasion",
+      "hasSubCategories": true,
+      "products": [
+        {
+          "name": "Everyday Wear",
+          "image": "shop-by-occasion/everyday-wear.jpg"
+        },
+        {
+          "name": "Party Wear",
+          "image": "shop-by-occasion/party-wear.jpg"
+        },
+        {
+          "name": "Wedding",
+          "image": "shop-by-occasion/wedding.jpg"
+        },
+        {
+          "name": "Winter Wear",
+          "image": "shop-by-occasion/winter-wear.jpg"
+        },
+        {
+          "name": "Office Wear",
+          "image": "shop-by-occasion/office-wear.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Shop by Product",
+      "id": "shop-by-product",
+      "products": [
+        {
+          "name": "Strapless Short Dress",
+          "price": "55.90 EUR",
+          "colors": ["#E0C6D1", "#E69696", "#333434", "#F0DF88"],
+          "image": "products/strapless_short_dress.jpg",
+          "tag": null,
+          "ecoFriendly": false
+        },
+        {
+          "name": "Cropped Faux Fur Jacket",
+          "price": "35.90 EUR",
+          "colors": ["#75A3BE", "#322E2E", "#F7EFEF"],
+          "image": "products/cropped_faux_fur_jacket.jpg",
+          "tag": null,
+          "ecoFriendly": true
+        },
+        {
+          "name": "Satin Mini Dress",
+          "price": "49.90 EUR",
+          "colors": ["#A60121", "#282826", "#044888"],
+          "image": "products/satin_mini_dress.jpg",
+          "tag": null,
+          "ecoFriendly": false
+        },
+        {
+          "name": "Fluffy Jacket",
+          "price": "59.90 EUR",
+          "colors": ["#0D0D0D", "#DCADAD", "#BEE2F8"],
+          "image": "products/fluffy_jacket.jpg",
+          "tag": null,
+          "ecoFriendly": false
+        },
+        {
+          "name": "Sequin Blazer",
+          "price": "50.00 EUR",
+          "originalPrice": "60.00 EUR",
+          "discount": "20% Off",
+          "colors": ["#161616", "#A81111"],
+          "image": "products/sequin_blazer.jpg",
+          "tag": "Festive Offers",
+          "ecoFriendly": true
+        }
+      ]
+    },
+    {
+      "name": "Eco-friendly",
+      "id": "eco-friendly",
+      "products": [
+        {
+          "name": "Floral Print Blouse",
+          "price": "39.90 EUR",
+          "colors": ["#814D6B", "#AB5E5E", "#EAE2E2"],
+          "image": "products/floral_print_blouse.jpg",
+          "tag": null,
+          "ecoFriendly": true
+        },
+        {
+          "name": "Faux Shearling Jacket",
+          "price": "50.00 EUR",
+          "originalPrice": "55.00 EUR",
+          "discount": "10% Off",
+          "colors": ["#CEC0A6", "#353232", "#353232"],
+          "image": "products/faux_shearling_jacket.jpg",
+          "tag": "Festive Offers",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Vee Knit",
+          "price": "35.90 EUR",
+          "colors": ["#C5BB36", "#CF8F8F", "#B1ADEA", "#E4DADA"],
+          "image": "products/vee_knit.jpg",
+          "tag": "Eco-friendly",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Soft Knit Sweater",
+          "price": "25.90 EUR",
+          "colors": ["#D56E84", "#FDF1F1", "#D4CB85"],
+          "image": "products/soft_knit_sweater.jpg",
+          "tag": "Eco-friendly",
+          "ecoFriendly": true
+        },
+        {
+          "name": "Short Oxford Shirt",
+          "price": "30.90 EUR",
+          "colors": ["#91B2DD", "#79C5AB", "#D77D7D"],
+          "image": "products/short_oxford_shirt.jpg",
+          "tag": "Eco-friendly",
+          "ecoFriendly": true
+        }
+      ]
+    },
+    {
+      "name": "Help & Info",
+      "id": "help-info",
+      "hasSubCategories": true,
+      "products": [
+        {
+          "name": "Customer Service",
+          "image": "help/cs.jpg"
+        },
+        {
+          "name": "Track Order",
+          "image": "help/to.jpg"
+        },
+        {
+          "name": "Delivery & Return",
+          "image": "help/dr.jpg"
+        }
+      ],
+      "customStyles": {
+        "justifyContent": "center",
+        "gap": "80px"
+      }
+    }
+  ]
+}

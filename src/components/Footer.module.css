@@ -1,0 +1,113 @@
+.footer {
+}
+
+.upperFooter {
+  background-color: var(--color-bg--primary);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 42px 10rem;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.sectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.highlightedText {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.currentRegion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.otherCountriesTitle {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+}
+
+.otherCountries {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 12px;
+  column-gap: 24px;
+  width: fit-content;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.appStore {
+  cursor: pointer;
+  width: 165px;
+  height: 45px;
+  object-fit: contain;
+
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
+
+.spacer {
+  margin-bottom: 16px;
+}
+
+.lowerFooter {
+  background-color: var(--color-bg--secondary);
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rem;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: -0.28px;
+}
+
+.link {
+  cursor: pointer;
+  &:hover {
+    color: rgb(52, 52, 255);
+  }
+}

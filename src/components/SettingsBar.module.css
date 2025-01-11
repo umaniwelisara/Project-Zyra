@@ -1,0 +1,25 @@
+.settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-bg--secondary);
+  height: 64px;
+  min-height: 64px;
+  padding: 0 10rem;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+
+.settingsSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.personalizeTitle {
+  margin-right: 12px;
+  font-size: 14px;
+}

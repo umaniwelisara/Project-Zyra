@@ -1,0 +1,76 @@
+.appPromotion {
+  height: 164px;
+  background-color: var(--color-bg--tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.outerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 84px;
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 30px;
+  flex: 50%;
+  text-align: right;
+}
+
+.appText {
+  color: var(--color-text--light);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.downloadContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 50%;
+}
+
+.downloadButton {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: var(--color-text--light);
+  color: var(--color-text--primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  line-height: 20px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--color-bg--hover3);
+  }
+}
+
+.or {
+  font-size: 16px;
+  color: var(--color-text--light);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 40px;
+}
+
+.qrCode {
+  background-image: url("/qr-code.png");
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  background-color: var(--color-text--light);
+}

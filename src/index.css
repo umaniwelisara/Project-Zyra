@@ -1,0 +1,35 @@
+:root {
+  font-family: "Poppins", sans-serif;
+
+  --color-bg--primary: #e2effa;
+  --color-bg--secondary: #f6fbff;
+  --color-bg--tertiary: #14b8a6;
+  --color-bg--label: #ff6b6b;
+
+  /* --color-bg--hover: rgba(0, 0, 0, 0.1);
+  --color-bg--active: rgba(0, 0, 0, 0.2); */
+
+  --color-bg--hover: rgba(20, 184, 166, 0.3);
+  --color-bg--hover2: rgba(20, 184, 165, 0.156);
+  --color-bg--hover3: rgba(255, 255, 255, 0.759);
+  --color-bg--active: rgba(20, 184, 166, 0.5);
+
+  --color-action--primary: #0284c7;
+  --color-action--hover: #0279b5;
+
+  --color-text--primary: #020817;
+  --color-text--secondary: #64748b;
+  --color-text--muted: #9aa2ae;
+  --color-text--light: #f6fbff;
+
+  --color-border--primary: #14b8a6;
+  --color-border--secondary: #020817;
+  --color-border--tertiary: #0284c7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+}

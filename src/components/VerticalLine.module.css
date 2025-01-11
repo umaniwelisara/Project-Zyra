@@ -1,0 +1,11 @@
+.verticalLine {
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--color-action--primary),
+    transparent
+  );
+  height: 60%;
+  margin: 0 10px;
+}
