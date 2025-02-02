@@ -1,0 +1,16 @@
+.products {
+  height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--color-bg--secondary);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10rem;
+  gap: 52px;
+}

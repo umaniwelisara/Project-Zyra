@@ -2,10 +2,8 @@
   height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-.home {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
+

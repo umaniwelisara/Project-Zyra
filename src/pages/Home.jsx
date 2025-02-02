@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "../components/Button";
 
 import styles from "./Home.module.css";
 import SettingsBar from "../components/SettingsBar";
@@ -10,20 +9,19 @@ import productsData from "../products.json";
 import AppPromotion from "../components/AppPromotion";
 import PaymentMethods from "../components/PaymentMethods";
 import Footer from "../components/Footer";
+import AnnouncementBanner from "../components/AnnouncementBanner";
 
 const Home = () => {
   return (
     <main className={styles.home}>
       <SettingsBar />
       <NavigationBar />
+      <AnnouncementBanner />
       <Categories />
       {productsData.categories.map((category, index) => (
         <CategoryPreview
           key={category.id}
-          categoryName={category.name}
-          products={category.products}
-          customStyles={category.customStyles}
-          hasSubCategories={category.hasSubCategories}
+          {...category}
           bgColor={
             index % 2 === 0
               ? "var(--color-bg--primary)"

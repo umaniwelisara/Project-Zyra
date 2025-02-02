@@ -1,0 +1,14 @@
+.banner {
+  height: 32px;
+  min-height: 32px;
+  box-sizing: border-box;
+  background-color: var(--color-bg--label);
+  color: var(--color-text--light);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "name": "Strapless Short Dress",
+      "price": "55.90 EUR",
+      "priceAmt": 55.9,
+      "colors": ["#E0C6D1", "#E69696", "#333434", "#F0DF88"],
+      "colorCategory": ["pink", "black", "yellow"],
+      "image": "products/strapless_short_dress.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "dress"
+    },
+    {
+      "name": "Cropped Faux Fur Jacket",
+      "price": "35.90 EUR",
+      "priceAmt": 35.9,
+      "colors": ["#75A3BE", "#322E2E", "#F7EFEF"],
+      "image": "products/cropped_faux_fur_jacket.jpg",
+      "tag": null,
+      "ecoFriendly": true,
+      "type": "jacket"
+    }
+  ]
+}

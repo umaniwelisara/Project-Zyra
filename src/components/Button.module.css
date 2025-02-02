@@ -1,18 +1,39 @@
 .btn {
   color: inherit;
   font-family: inherit;
-  font-size: 16px;
-  font-weight: bold;
   border: none;
-  border-radius: 12px;
   cursor: pointer;
-  height: 40px;
-  padding: 0 32px;
+  box-sizing: border-box;
 }
 
 .primary {
   background-color: var(--color-action--primary);
   color: var(--color-text--light);
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
+  padding: 12px 32px;
+  line-height: 16px;
+
+  &:hover {
+    background-color: var(--color-action--hover);
+  }
+
+  &:active {
+    background-color: var(--color-action--primary);
+  }
+}
+
+.primarySmall {
+  background-color: var(--color-action--primary);
+  color: var(--color-text--light);
+  height: 32px;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 12px;
+  padding: 8px 32px;
+  line-height: 16px;
 
   &:hover {
     background-color: var(--color-action--hover);

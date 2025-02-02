@@ -6,8 +6,8 @@
       "products": [
         {
           "name": "Hoodie",
-          "price": "35.00 EUR",
-          "originalPrice": "43.75 EUR",
+          "price": "36.00 EUR",
+          "originalPrice": "45.00 EUR",
           "discount": "20% Off",
           "colors": ["#020817", "#EA8787", "#83B1D9"],
           "image": "products/hoodie.jpg",
@@ -16,8 +16,8 @@
         },
         {
           "name": "Round Neck Sweatshirt",
-          "price": "27.50 EUR",
-          "originalPrice": "25.00 EUR",
+          "price": "27.00 EUR",
+          "originalPrice": "30.00 EUR",
           "discount": "10% Off",
           "colors": ["#BBBFA8", "#1A1A1A", "#D1CECE"],
           "image": "products/round_neck_sweatshirt.jpg",
@@ -26,8 +26,8 @@
         },
         {
           "name": "Basic Jogger Trousers",
-          "price": "40.00 EUR",
-          "originalPrice": "44.00 EUR",
+          "price": "40.50 EUR",
+          "originalPrice": "45.00 EUR",
           "discount": "10% Off",
           "colors": ["#EBEAE5", "#D97777"],
           "image": "products/basic_jogger_trousers.jpg",
@@ -36,8 +36,8 @@
         },
         {
           "name": "Compact Sweatshirt",
-          "price": "50.00 EUR",
-          "originalPrice": "60.00 EUR",
+          "price": "32.00 EUR",
+          "originalPrice": "40.00 EUR",
           "discount": "20% Off",
           "colors": ["#161616", "#A4B9A6", "#FCBCBC", "#D3BD81"],
           "image": "products/compact_sweatshirt.jpg",
@@ -46,7 +46,7 @@
         },
         {
           "name": "Velvet Midi Dress",
-          "price": "60.00 EUR",
+          "price": "59.50 EUR",
           "originalPrice": "70.00 EUR",
           "discount": "15% Off",
           "colors": ["#040404", "#FFE4E4", "#F3F2F2"],
@@ -120,7 +120,8 @@
           "colors": ["#E0C6D1", "#E69696", "#333434", "#F0DF88"],
           "image": "products/strapless_short_dress.jpg",
           "tag": null,
-          "ecoFriendly": false
+          "ecoFriendly": false,
+          "type": "dress"
         },
         {
           "name": "Cropped Faux Fur Jacket",
@@ -148,7 +149,7 @@
         },
         {
           "name": "Sequin Blazer",
-          "price": "50.00 EUR",
+          "price": "48.00 EUR",
           "originalPrice": "60.00 EUR",
           "discount": "20% Off",
           "colors": ["#161616", "#A81111"],
@@ -172,7 +173,7 @@
         },
         {
           "name": "Faux Shearling Jacket",
-          "price": "50.00 EUR",
+          "price": "49.50 EUR",
           "originalPrice": "55.00 EUR",
           "discount": "10% Off",
           "colors": ["#CEC0A6", "#353232", "#353232"],

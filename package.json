@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.474.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.1.0"
@@ -26,5 +27,18 @@
     "globals": "^15.13.0",
     "vite": "^6.0.3",
     "vite-plugin-eslint": "^1.8.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umaniwelisara/Project-Zyra.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/umaniwelisara/Project-Zyra/issues"
+  },
+  "homepage": "https://github.com/umaniwelisara/Project-Zyra#readme"
 }
