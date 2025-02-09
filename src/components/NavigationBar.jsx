@@ -1,12 +1,21 @@
 import React from "react";
 import IconButton from "./IconButton";
 import styles from "./NavigationBar.module.css";
+import { useNavigate } from "react-router-dom";
 
 const NavigationBar = () => {
+  const navigate = useNavigate();
   return (
     <section className={styles.navbar}>
       <div className={styles.navContent}>
-        <img src="/logo.svg" alt="Logo" className={styles.logo} />
+        <img
+          src="/logo.svg"
+          alt="Logo"
+          className={styles.logo}
+          onClick={() => {
+            navigate("/");
+          }}
+        />
         <div className={styles.menu}>
           <span className={`${styles.menuItem} ${styles.active}`}>WOMEN</span>
           <span className={`${styles.menuItem} ${styles.inactive}`}>MEN</span>

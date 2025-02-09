@@ -2,6 +2,7 @@ import React from "react";
 
 import styles from "./FiltersSummary.module.css";
 import Button from "./Button";
+import { X } from "lucide-react";
 
 const FiltersSummary = ({ filters, onFilterRemove, onClearAll }) => {
   const formatFilterLabel = (key, value) => {
@@ -30,29 +31,13 @@ const FiltersSummary = ({ filters, onFilterRemove, onClearAll }) => {
       <section className={styles.appliedFilters}>
         <div className={styles.filtersList}>
           {appliedFilters.map(({ key, label }) => (
-            <div
-              key={key}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                background: "#ccc",
-                borderRadius: "16px",
-                padding: "6px 10px",
-                fontSize: "14px",
-                cursor: "pointer",
-              }}
-            >
+            <div key={key} className={styles.filterChip}>
               {label}
-              <span
+              <X
+                size={22}
+                className={styles.filterChipClose}
                 onClick={() => onFilterRemove(key)}
-                style={{
-                  marginLeft: "6px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
-              >
-                ✕
-              </span>
+              />
             </div>
           ))}
         </div>

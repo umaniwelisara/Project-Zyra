@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CheckboxList.module.css";
 
-const CheckboxList = ({ uniqueTypes, onChange }) => {
-  const [selected, setSelected] = useState([]);
+const CheckboxList = ({ uniqueTypes, selectedValues = [], onChange }) => {
+  const [selected, setSelected] = useState(selectedValues);
+
+  // Only update state when selectedValues actually change
+  useEffect(() => {
+    if (JSON.stringify(selected) !== JSON.stringify(selectedValues)) {
+      setSelected(selectedValues);
+    }
+  }, [selectedValues, selected]);
 
   const handleCheckboxChange = (value) => {
-    const newSelection = selected.includes(value)
+    const updatedSelection = selected.includes(value)
       ? selected.filter((item) => item !== value)
       : [...selected, value];
 
-    setSelected(newSelection);
-    onChange(newSelection);
+    setSelected(updatedSelection);
+    onChange(updatedSelection);
   };
 
   return (

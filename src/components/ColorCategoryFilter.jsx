@@ -1,20 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./ColorCategoryFilter.module.css";
 
-const ColorCategoryFilter = ({ products, onChange }) => {
+const ColorCategoryFilter = ({ products, selectedColors = [], onChange }) => {
   // Extract unique colors from products
   const uniqueColors = Array.from(
     new Set(products.flatMap((p) => p.colorCategory))
   );
 
-  const [selectedColors, setSelectedColors] = useState([]);
+  const [selected, setSelected] = useState(selectedColors);
+
+  // Only update state when selectedColors actually change
+  useEffect(() => {
+    if (JSON.stringify(selected) !== JSON.stringify(selectedColors)) {
+      setSelected(selectedColors);
+    }
+  }, [selectedColors, selected]);
 
   const handleColorClick = (color) => {
-    const updatedSelection = selectedColors.includes(color)
-      ? selectedColors.filter((c) => c !== color)
-      : [...selectedColors, color];
+    const updatedSelection = selected.includes(color)
+      ? selected.filter((c) => c !== color)
+      : [...selected, color];
 
-    setSelectedColors(updatedSelection);
+    setSelected(updatedSelection);
     onChange(updatedSelection);
   };
 
@@ -24,7 +31,7 @@ const ColorCategoryFilter = ({ products, onChange }) => {
         <button
           key={color}
           className={`${styles.colorButton} ${
-            selectedColors.includes(color) ? styles.selected : ""
+            selected.includes(color) ? styles.selected : ""
           }`}
           onClick={() => handleColorClick(color)}
         >

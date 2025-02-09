@@ -29,6 +29,10 @@
   height: 100%;
 }
 
+.logo {
+  cursor: pointer;
+}
+
 .menuItem {
   display: flex;
   justify-content: center;

@@ -1,24 +1,32 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./PriceRangeSlider.module.css";
 
-const PriceRangeSlider = ({ min, max, onChange }) => {
-  const [range, setRange] = useState([min, max]);
+const PriceRangeSlider = ({ min, max, selectedRange, onChange }) => {
+  const [range, setRange] = useState(selectedRange ?? [min, max]);
+
+  useEffect(() => {
+    if (Array.isArray(selectedRange) && selectedRange.length === 2) {
+      setRange(selectedRange);
+    } else {
+      setRange([min, max]); // Default to min/max if undefined
+    }
+  }, [selectedRange, min, max]);
 
   const handleChange = (e, index) => {
     const value = Number(e.target.value);
     const newRange = [...range];
 
     if (index === 0) {
-      newRange[0] = Math.min(value, newRange[1] - 12); // Ensure min thumb stays at least 12 units below max
+      newRange[0] = Math.min(value, newRange[1] - 12); // Prevent overlap
     } else {
-      newRange[1] = Math.max(value, newRange[0] + 12); // Ensure max thumb stays at least 12 units above min
+      newRange[1] = Math.max(value, newRange[0] + 12);
     }
 
     setRange(newRange);
   };
 
   const handleRelease = () => {
-    onChange(range); // Fire event only when user releases the slider
+    onChange(range);
   };
 
   const left = ((range[0] - min) / (max - min)) * 100;
@@ -40,7 +48,7 @@ const PriceRangeSlider = ({ min, max, onChange }) => {
           type="range"
           min={min}
           max={max}
-          value={range[0]}
+          value={range[0] ?? min} // Ensure value is never undefined
           onChange={(e) => handleChange(e, 0)}
           onMouseUp={handleRelease}
           onTouchEnd={handleRelease}
@@ -50,7 +58,7 @@ const PriceRangeSlider = ({ min, max, onChange }) => {
           type="range"
           min={min}
           max={max}
-          value={range[1]}
+          value={range[1] ?? max} // Ensure value is never undefined
           onChange={(e) => handleChange(e, 1)}
           onMouseUp={handleRelease}
           onTouchEnd={handleRelease}

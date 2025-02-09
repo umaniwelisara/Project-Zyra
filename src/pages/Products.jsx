@@ -12,10 +12,29 @@ import ProductsGrid from "../components/ProductsGrid";
 import allProductsData from "../allproducts.json";
 
 const Products = () => {
-  const [filters, setFilters] = useState({ type: [] });
+  const [filters, setFilters] = useState({
+    type: [],
+    price: [],
+    color: [],
+  });
 
   const handleFilterChange = (newFilters) => {
     setFilters((prevFilters) => ({ ...prevFilters, ...newFilters }));
+  };
+
+  const handleFilterRemove = (key) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [key]: [],
+    }));
+  };
+
+  const handleClearAll = () => {
+    setFilters({
+      type: [],
+      price: [],
+      color: [],
+    });
   };
 
   const filteredProducts = allProductsData.products.filter((product) => {
@@ -45,10 +64,16 @@ const Products = () => {
       <NavigationBar />
       <AnnouncementBanner />
 
-      <FiltersSummary filters={filters} />
+      <FiltersSummary
+        filters={filters}
+        onFilterRemove={handleFilterRemove}
+        onClearAll={handleClearAll}
+      />
+
       <section className={styles.content}>
         <FiltersBar
           products={allProductsData.products}
+          filters={filters}
           onFilterChange={handleFilterChange}
         />
 

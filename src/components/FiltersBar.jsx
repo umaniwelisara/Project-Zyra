@@ -7,7 +7,7 @@ import ColorCategoryFilter from "./ColorCategoryFilter";
 import SizeSelector from "./SizeSelector";
 import { ChevronDown } from "lucide-react";
 
-const FiltersBar = ({ products, onFilterChange }) => {
+const FiltersBar = ({ products, filters, onFilterChange }) => {
   const uniqueProductTypes = Array.from(
     new Set(products.map((p) => p.type))
   ).map((type) => ({
@@ -27,6 +27,7 @@ const FiltersBar = ({ products, onFilterChange }) => {
             content: (
               <CheckboxList
                 uniqueTypes={uniqueProductTypes}
+                selectedValues={filters.type}
                 onChange={(selected) => onFilterChange({ type: selected })}
               />
             ),
@@ -37,6 +38,7 @@ const FiltersBar = ({ products, onFilterChange }) => {
               <PriceRangeSlider
                 min={10}
                 max={80}
+                selectedRange={filters.price}
                 onChange={(range) => onFilterChange({ price: range })}
               />
             ),
@@ -46,6 +48,7 @@ const FiltersBar = ({ products, onFilterChange }) => {
             content: (
               <ColorCategoryFilter
                 products={products}
+                selectedColors={filters.color}
                 onChange={(selected) => onFilterChange({ color: selected })}
               />
             ),
