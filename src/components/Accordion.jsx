@@ -3,7 +3,7 @@ import { Plus, Minus } from "lucide-react";
 import styles from "./accordion.module.css";
 
 const AccordionItem = ({ title, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className={styles.accordionItem}>

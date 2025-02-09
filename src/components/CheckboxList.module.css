@@ -1,0 +1,22 @@
+.checkBoxList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.checkBoxOpt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text--primary);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkBox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}

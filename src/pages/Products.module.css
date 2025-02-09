@@ -14,3 +14,27 @@
   padding: 0 10rem;
   gap: 52px;
 }
+
+.noProducts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.noProducts p {
+  margin: 5px 0;
+}
+
+.noProducts p:first-child {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}

@@ -20,6 +20,164 @@
       "tag": null,
       "ecoFriendly": true,
       "type": "jacket"
+    },
+    {
+      "name": "Satin Mini Dress",
+      "price": "49.90 EUR",
+      "priceAmt": 49.9,
+      "colors": ["#A60121", "#282826", "#044888"],
+      "colorCategory": ["red", "black", "blue"],
+      "image": "products/satin_mini_dress.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "dress"
+    },
+    {
+      "name": "Fluffy Jacket",
+      "price": "59.90 EUR",
+      "priceAmt": 59.9,
+      "colors": ["#040404", "#4C3A28", "#CAC7B8", "#D3B938"],
+      "colorCategory": ["black", "brown", "white", "yellow"],
+      "image": "products/fluffy_jacket.jpg",
+      "tag": null,
+      "ecoFriendly": true,
+      "type": "jacket"
+    },
+    {
+      "name": "Sequin Blazer",
+      "price": "48.00 EUR",
+      "priceAmt": 48,
+      "colors": ["#161616", "#A81111"],
+      "colorCategory": ["black", "red"],
+      "image": "products/sequin_blazer.jpg",
+      "tag": "Festive Offers",
+      "discount": "20% Off",
+      "ecoFriendly": true,
+      "type": "dress"
+    },
+    {
+      "name": "Ruffled Knit Sweater",
+      "price": "35.90 EUR",
+      "priceAmt": 35.9,
+      "colors": ["#BC9273", "#C68181", "#E7EFF4", "#5284A3"],
+      "colorCategory": ["yellow", "pink", "white", "Blue"],
+      "image": "products/ruffled_knit_sweater.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "blouse"
+    },
+    {
+      "name": "Pebble Ruffle Knit",
+      "price": "29.90 EUR",
+      "priceAmt": 29.9,
+      "colors": ["#747879", "#F8F2F2", "#1A1E20"],
+      "colorCategory": ["black", "white"],
+      "image": "products/pebble_ruffle_knit.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "blouse"
+    },
+    {
+      "name": "Oversized High Neck Sweater",
+      "price": "49.50 EUR",
+      "priceAmt": 49.5,
+      "colors": ["#645743", "#C4BDB2", "#636E90", "#C51224"],
+      "colorCategory": ["brown", "white", "blue", "red"],
+      "image": "products/oversized_high_neck_sweater.jpg",
+      "tag": "Special Price",
+      "discount": "10% Off",
+      "ecoFriendly": false,
+      "type": "sweater"
+    },
+    {
+      "name": "Short Sequinned Dress",
+      "price": "49.90 EUR",
+      "priceAmt": 49.9,
+      "colors": ["#4B4B4B", "#CF3B3B", "#5AA0C6"],
+      "colorCategory": ["black", "red", "blue"],
+      "image": "products/short_sequinned_dress.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "dress"
+    },
+    {
+      "name": "Ruffled Knit Sweater",
+      "price": "31.50 EUR",
+      "priceAmt": 31.5,
+      "colors": ["#C69F80", "#E89B9B"],
+      "colorCategory": ["yellow", "pink"],
+      "image": "products/ruffled_knit_sweater_2.jpg",
+      "tag": "Special Price",
+      "discount": "10% Off",
+      "ecoFriendly": false,
+      "type": "sweater"
+    },
+    {
+      "name": "Golden Button Cardigan",
+      "price": "34.50 EUR",
+      "priceAmt": 34.5,
+      "colors": ["#14141C", "#482828", "#545759", "#8D231A"],
+      "colorCategory": ["black", "brown", "red"],
+      "image": "products/golden_button_cardigan.jpg",
+      "tag": "Special Price",
+      "discount": "25% Off",
+      "ecoFriendly": false,
+      "type": "coat"
+    },
+    {
+      "name": "Wool Blend Coat",
+      "price": "59.90 EUR",
+      "priceAmt": 59.9,
+      "colors": ["#494C3C", "#140E0E", "#4D4F50"],
+      "colorCategory": ["black", "green"],
+      "image": "products/wool_blend_coat.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "coat"
+    },
+    {
+      "name": "Double-Breasted Coat",
+      "price": "69.90 EUR",
+      "priceAmt": 69.9,
+      "colors": ["#9E1A27", "#1B0909", "#4C5C20"],
+      "colorCategory": ["red", "black", "green"],
+      "image": "products/double_breasted_coat.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "coat"
+    },
+    {
+      "name": "Basic Wool Polo Shirt",
+      "price": "55.90 EUR",
+      "priceAmt": 55.9,
+      "colors": ["#3F0E17", "#663737", "#192024"],
+      "colorCategory": ["red", "brown", "black"],
+      "image": "products/basic_wool_polo_shirt.jpg",
+      "tag": null,
+      "ecoFriendly": true,
+      "type": "shirt"
+    },
+    {
+      "name": "Soft Ribbed Top",
+      "price": "19.90 EUR",
+      "priceAmt": 19.9,
+      "colors": ["#161616", "#F8F2F2", "#5D656A", "#4C3021"],
+      "colorCategory": ["black", "white", "brown"],
+      "image": "products/soft_ribbed_top.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "shirt"
+    },
+    {
+      "name": "Printed Mini Dress",
+      "price": "49.90 EUR",
+      "priceAmt": 49.9,
+      "colors": ["#746F31", "#212122", "#E687AE", "#26546C"],
+      "colorCategory": ["green", "black", "pink", "blue"],
+      "image": "products/printed_mini_dress.jpg",
+      "tag": null,
+      "ecoFriendly": false,
+      "type": "dress"
     }
   ]
 }

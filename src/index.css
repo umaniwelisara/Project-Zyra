@@ -17,6 +17,9 @@
   --color-action--primary: #0284c7;
   --color-action--hover: #0279b5;
 
+  --color-action--secondary: #ffffff;
+  --color-action--secondary--hover: #dedede;
+
   --color-text--primary: #020817;
   --color-text--secondary: #64748b;
   --color-text--muted: #9aa2ae;

@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "./ProductsGrid.module.css";
+import Product from "./Product";
 
-const ProductsGrid = () => {
-  return <div className={styles.grid}>ProductsGrid</div>;
+const ProductsGrid = ({ products }) => {
+  return (
+    <div className={styles.grid}>
+      {products.map((product, index) => (
+        <Product key={index} product={product} />
+      ))}
+    </div>
+  );
 };
 
 export default ProductsGrid;

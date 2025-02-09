@@ -1,6 +1,7 @@
 .product {
   cursor: pointer;
   padding: 12px;
+  height: fit-content;
 }
 
 .product:hover {
