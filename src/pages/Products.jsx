@@ -30,7 +30,13 @@ const Products = () => {
           product.priceAmt <= filters.price[1]
         : true;
 
-    return typeMatch && priceMatch;
+    // Filter by Color Category (at least one selected color must match)
+    const colorMatch =
+      filters?.color?.length > 0
+        ? product.colorCategory.some((color) => filters.color.includes(color))
+        : true;
+
+    return typeMatch && priceMatch && colorMatch;
   });
 
   return (
@@ -39,7 +45,7 @@ const Products = () => {
       <NavigationBar />
       <AnnouncementBanner />
 
-      <FiltersSummary />
+      <FiltersSummary filters={filters} />
       <section className={styles.content}>
         <FiltersBar
           products={allProductsData.products}

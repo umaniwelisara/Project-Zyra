@@ -25,6 +25,11 @@ const Product = ({ product, hasSubCategories }) => {
           </div>
         )}
         <img src={`/categories/${product.image}`} alt="Product" />
+        {product.ecoFriendly && (
+          <div className={styles.ecoFriendly}>
+            <img src="eco-friendly.png" alt="Eco-Friendly Label" />
+          </div>
+        )}
       </div>
       <div className={styles.productInfo}>
         {hasSubCategories ? (

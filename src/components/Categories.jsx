@@ -1,8 +1,15 @@
 import React from "react";
 import styles from "./Categories.module.css";
 import IconButton from "./IconButton";
+import { useNavigate } from "react-router-dom";
 
 const Categories = () => {
+  const navigate = useNavigate();
+
+  const shopByProduct = () => {
+    navigate("/products");
+  };
+
   return (
     <section className={styles.categories}>
       <IconButton
@@ -14,6 +21,7 @@ const Categories = () => {
         size="XL"
         iconUrl="/categories/by-product.png"
         label="Shop by Product"
+        onClick={shopByProduct}
       />
       <IconButton
         size="XL"

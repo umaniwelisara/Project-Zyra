@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./IconButton.module.css";
 
-const IconButton = ({ iconUrl, label, size = "S" }) => {
+const IconButton = ({ onClick, iconUrl, label, size = "S" }) => {
   const buttonClass = size === "XL" ? styles.XLarge : null;
   const iconClass = size === "XL" ? styles.iconXLarge : null;
   const labelClass =
@@ -12,7 +12,7 @@ const IconButton = ({ iconUrl, label, size = "S" }) => {
       : styles.labelSmall;
 
   return (
-    <button className={`${styles.iconButton} ${buttonClass}`}>
+    <button className={`${styles.iconButton} ${buttonClass}`} onClick={onClick}>
       <img src={iconUrl} alt="icon" className={`${styles.icon} ${iconClass}`} />
       <div className={`${styles.label} ${labelClass}`}>{label}</div>
     </button>

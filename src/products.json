@@ -129,7 +129,7 @@
           "colors": ["#75A3BE", "#322E2E", "#F7EFEF"],
           "image": "products/cropped_faux_fur_jacket.jpg",
           "tag": null,
-          "ecoFriendly": true
+          "ecoFriendly": false
         },
         {
           "name": "Satin Mini Dress",
@@ -186,7 +186,7 @@
           "price": "35.90 EUR",
           "colors": ["#C5BB36", "#CF8F8F", "#B1ADEA", "#E4DADA"],
           "image": "products/vee_knit.jpg",
-          "tag": "Eco-friendly",
+          "tag": null,
           "ecoFriendly": true
         },
         {
@@ -194,7 +194,7 @@
           "price": "25.90 EUR",
           "colors": ["#D56E84", "#FDF1F1", "#D4CB85"],
           "image": "products/soft_knit_sweater.jpg",
-          "tag": "Eco-friendly",
+          "tag": null,
           "ecoFriendly": true
         },
         {
@@ -202,7 +202,7 @@
           "price": "30.90 EUR",
           "colors": ["#91B2DD", "#79C5AB", "#D77D7D"],
           "image": "products/short_oxford_shirt.jpg",
-          "tag": "Eco-friendly",
+          "tag": null,
           "ecoFriendly": true
         }
       ]

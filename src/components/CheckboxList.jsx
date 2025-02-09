@@ -1,18 +1,8 @@
 import { useState } from "react";
 import styles from "./CheckboxList.module.css";
 
-const CheckboxList = ({ products, onChange }) => {
+const CheckboxList = ({ uniqueTypes, onChange }) => {
   const [selected, setSelected] = useState([]);
-
-  const uniqueTypes = Array.from(new Set(products.map((p) => p.type))).map(
-    (type) => ({
-      value: type,
-      label:
-        type === "dress"
-          ? "Dresses"
-          : type.charAt(0).toUpperCase() + type.slice(1) + "s",
-    })
-  );
 
   const handleCheckboxChange = (value) => {
     const newSelection = selected.includes(value)
