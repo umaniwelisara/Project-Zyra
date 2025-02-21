@@ -2,14 +2,17 @@ import Switch from "./Switch";
 import IconButton from "./IconButton";
 import VerticalLine from "./VerticalLine";
 import styles from "./SettingsBar.module.css";
+import { useContext } from "react";
+import AgeGroupContext from "../context/AgeGroupContext";
 
 const SettingsBar = () => {
-  const handleSwitchChange = (newState, onValue, offValue) => {
-    if (newState) {
-      console.log(onValue);
-    } else {
-      console.log(offValue);
-    }
+  const { ageGroup, updateAgeGroup } = useContext(AgeGroupContext);
+
+  const isYouthful = ageGroup === "youthful";
+
+  const handleSwitchChange = (newState) => {
+    const newAgeGroup = newState ? "youthful" : "graceful";
+    updateAgeGroup(newAgeGroup);
   };
 
   return (
@@ -17,23 +20,33 @@ const SettingsBar = () => {
       <div className={styles.settingsSection}>
         <span className={styles.personalizeTitle}>Personalize</span>
         <Switch
+          isOn={!isYouthful}
           onText="Youthful"
           offText="Graceful"
-          onChange={(newState) =>
-            handleSwitchChange(newState, "graceful", "youthful")
-          }
+          onChange={handleSwitchChange}
         />
         <VerticalLine />
-        <Switch
-          onText="Show Ads"
-          offText="No Ads"
-          onChange={(newState) =>
-            handleSwitchChange(newState, "no-ads", "show-ads")
-          }
-        />
+        <Switch isOn={false} onText="Show Ads" offText="No Ads" />
       </div>
 
       <div className={styles.settingsSection}>
+        {!isYouthful && (
+          <>
+            <IconButton
+              iconUrl="/change-text.svg"
+              label="Contrast"
+              size="WIDE"
+            />
+            <VerticalLine />
+            <IconButton
+              iconUrl="/change-text.svg"
+              label="Change Text"
+              size="WIDE"
+            />
+            <VerticalLine />
+          </>
+        )}
+
         <IconButton iconUrl="/dark-mode.svg" label="Dark Mode" />
         <VerticalLine />
         <IconButton iconUrl="/language.svg" label="Language" />

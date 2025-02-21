@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./Product.module.css";
+import { AG1 } from "../constants";
 
-const Product = ({ product, hasSubCategories }) => {
+const Product = ({ product, hasSubCategories, ageGroup }) => {
   const tags = [];
 
   if (product.tag) {
@@ -14,11 +15,20 @@ const Product = ({ product, hasSubCategories }) => {
 
   return (
     <div className={styles.product}>
-      <div className={styles.productImage}>
+      <div
+        className={`${styles.productImage} ${
+          ageGroup == AG1 ? styles.imgOpt1 : styles.imgOpt2
+        }`}
+      >
         {tags.length > 0 && (
           <div className={styles.tags}>
             {tags.map((tag, index) => (
-              <span className={styles.tag} key={`${product.name}-${index}`}>
+              <span
+                className={`${styles.tag} ${
+                  ageGroup == AG1 ? styles.tagOpt1 : styles.tagOpt2
+                }`}
+                key={`${product.name}-${index}`}
+              >
                 {tag}
               </span>
             ))}
@@ -26,22 +36,54 @@ const Product = ({ product, hasSubCategories }) => {
         )}
         <img src={`/categories/${product.image}`} alt="Product" />
         {product.ecoFriendly && (
-          <div className={styles.ecoFriendly}>
+          <div
+            className={`${styles.ecoFriendly} ${
+              ageGroup == AG1 ? styles.ecoFriendlyOpt1 : styles.ecoFriendlyOpt2
+            }`}
+          >
             <img src="eco-friendly.png" alt="Eco-Friendly Label" />
           </div>
         )}
       </div>
       <div className={styles.productInfo}>
         {hasSubCategories ? (
-          <h4 className={styles.productCategoryName}>{product.name}</h4>
+          <h4
+            className={`${styles.productCategoryName} ${
+              ageGroup == AG1
+                ? styles.productCategoryNameOpt1
+                : styles.productCategoryNameOpt2
+            }`}
+          >
+            {product.name}
+          </h4>
         ) : (
-          <h3 className={styles.productName}>{product.name}</h3>
+          <h3
+            className={`${styles.productName} ${
+              ageGroup == AG1 ? styles.productNameOpt1 : styles.productNameOpt2
+            }`}
+          >
+            {product.name}
+          </h3>
         )}
 
         <div className={styles.priceInfo}>
-          <span className={styles.productPrice}>{product.price}</span>
+          <span
+            className={`${styles.productPrice} ${
+              ageGroup == AG1
+                ? styles.productPriceOpt1
+                : styles.productPriceOpt2
+            }`}
+          >
+            {product.price}
+          </span>
           {product.originalPrice && (
-            <span className={styles.productOriginalPrice}>
+            <span
+              className={`${styles.productOriginalPrice} ${
+                ageGroup == AG1
+                  ? styles.productOriginalPriceOpt1
+                  : styles.productOriginalPriceOpt2
+              }`}
+            >
               {product.originalPrice}
             </span>
           )}
@@ -51,7 +93,11 @@ const Product = ({ product, hasSubCategories }) => {
             product.colors.map((color, index) => (
               <div
                 key={`${product.name}-${index}`}
-                className={styles.productColor}
+                className={`${styles.productColor} ${
+                  ageGroup == AG1
+                    ? styles.productColorOpt1
+                    : styles.productColorOpt2
+                }`}
                 style={{ backgroundColor: color }}
               ></div>
             ))}

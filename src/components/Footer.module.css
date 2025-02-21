@@ -2,7 +2,7 @@
 }
 
 .upperFooter {
-  background-color: var(--color-bg--primary);
+  background-color: var(--color-bg--secondary);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -92,7 +92,7 @@
 }
 
 .lowerFooter {
-  background-color: var(--color-bg--secondary);
+  background-color: var(--color-bg--primary);
   height: 100px;
   display: flex;
   align-items: center;

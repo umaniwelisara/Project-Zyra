@@ -3,7 +3,12 @@ import styles from "./IconButton.module.css";
 
 const IconButton = ({ onClick, iconUrl, label, size = "S" }) => {
   const buttonClass = size === "XL" ? styles.XLarge : null;
-  const iconClass = size === "XL" ? styles.iconXLarge : null;
+  const iconClass =
+    size === "XL"
+      ? styles.iconXLarge
+      : size === "WIDE"
+      ? styles.iconWide
+      : null;
   const labelClass =
     size === "XL"
       ? styles.labelXLarge

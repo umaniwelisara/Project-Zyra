@@ -6,8 +6,14 @@
   padding: 2.6rem 10rem;
 }
 
-.categoryName {
+.categoryNameOpt1 {
   font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+.categoryNameOpt2 {
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 32px;
 }

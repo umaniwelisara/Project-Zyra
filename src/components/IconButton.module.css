@@ -41,6 +41,11 @@
   height: 50px;
 }
 
+.iconWide {
+  width: 61px;
+  height: 24px;
+}
+
 .labelSmall {
   font-size: 12px;
 }

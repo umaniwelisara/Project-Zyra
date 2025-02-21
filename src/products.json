@@ -32,7 +32,7 @@
           "colors": ["#EBEAE5", "#D97777"],
           "image": "products/basic_jogger_trousers.jpg",
           "tag": "Festive Offers",
-          "ecoFriendly": true
+          "ecoFriendly": false
         },
         {
           "name": "Compact Sweatshirt",
@@ -42,7 +42,7 @@
           "colors": ["#161616", "#A4B9A6", "#FCBCBC", "#D3BD81"],
           "image": "products/compact_sweatshirt.jpg",
           "tag": "Festive Offers",
-          "ecoFriendly": true
+          "ecoFriendly": false
         },
         {
           "name": "Velvet Midi Dress",
@@ -78,10 +78,7 @@
           "image": "shop-by-size/maternity.jpg"
         }
       ],
-      "customStyles": {
-        "justifyContent": "center",
-        "gap": "80px"
-      }
+      "customStyles": {}
     },
     {
       "name": "Shop by Occasion",

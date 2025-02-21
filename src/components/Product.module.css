@@ -5,7 +5,6 @@
 }
 
 .product:hover {
-  /* border: 1px solid #14b8a6; */
   box-shadow: 0px 4px 8px 0px var(--color-bg--hover2);
   transition: all 0.3s ease;
 }
@@ -15,9 +14,17 @@
 }
 
 .productImage img {
+  border-radius: 8px;
+}
+
+.imgOpt1 img {
   width: 200px;
   height: 200px;
-  border-radius: 8px;
+}
+
+.imgOpt2 img {
+  width: 250px;
+  height: 250px;
 }
 
 .tags {
@@ -32,19 +39,36 @@
 .tag {
   background-color: var(--color-bg--label);
   color: var(--color-text--light);
-  font-size: 12px;
   font-style: normal;
-  font-weight: 400;
   line-height: 20px;
-  height: 20px;
   width: fit-content;
-  padding: 0 20px 0 4px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
   border-top-right-radius: 3px;
+}
+
+.tagOpt1 {
+  font-size: 12px;
+  font-weight: 400;
+  height: 20px;
+  padding: 0 20px 0 4px;
   clip-path: polygon(
     0 0,
     100% 0,
     100% calc(100% - 20px),
+    calc(100% - 19px) 100%,
+    0 100%
+  );
+}
+
+.tagOpt2 {
+  font-size: 14px;
+  font-weight: 400;
+  height: 25px;
+  padding: 3px 24px 0px 4px;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 30px),
     calc(100% - 19px) 100%,
     0 100%
   );
@@ -56,9 +80,14 @@
   right: 10px;
 }
 
-.ecoFriendly img {
+.ecoFriendlyOpt1 img {
   width: 20px;
   height: 20px;
+}
+
+.ecoFriendlyOpt2 img {
+  width: 30px;
+  height: 30px;
 }
 
 .productInfo {
@@ -66,13 +95,21 @@
 }
 
 .productName {
-  font-size: 14px;
   color: var(--color-text--primary);
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
   line-height: 16px;
+}
+
+.productNameOpt1 {
+  font-size: 14px;
   margin-bottom: 2px;
+}
+
+.productNameOpt2 {
+  font-size: 16px;
+  margin-bottom: 6px;
 }
 
 .productCategoryName {
@@ -82,6 +119,14 @@
   font-style: normal;
   font-weight: 700;
   line-height: 16px;
+}
+
+.productCategoryNameOpt1 {
+  font-size: 14px;
+}
+
+.productCategoryNameOpt2 {
+  font-size: 16px;
 }
 
 .priceInfo {
@@ -98,6 +143,14 @@
   margin-right: 6px;
 }
 
+.productPriceOpt1 {
+  font-size: 16px;
+}
+
+.productPriceOpt2 {
+  font-size: 18px;
+}
+
 .productOriginalPrice {
   color: var(--color-text--muted);
   font-size: 14px;
@@ -105,6 +158,14 @@
   font-weight: 400;
   line-height: 16px;
   text-decoration: line-through;
+}
+
+.productOriginalPriceOpt1 {
+  font-size: 14px;
+}
+
+.productOriginalPriceOpt2 {
+  font-size: 16px;
 }
 
 .productColors {
@@ -115,8 +176,19 @@
 }
 
 .productColor {
+  box-sizing: border-box;
   height: 14px;
   width: 14px;
   border-radius: 100%;
   border: 0.5px solid var(--color-border--secondary);
+}
+
+.productColorOpt1 {
+  height: 14px;
+  width: 14px;
+}
+
+.productColorOpt2 {
+  height: 16px;
+  width: 16px;
 }

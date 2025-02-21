@@ -10,10 +10,10 @@
   background-color: var(--color-action--primary);
   color: var(--color-text--light);
   height: 40px;
-  font-size: 20px;
+
   font-weight: 500;
   border-radius: 12px;
-  padding: 12px 32px;
+  padding: 12px 44px;
   line-height: 16px;
 
   &:hover {
@@ -23,6 +23,14 @@
   &:active {
     background-color: var(--color-action--primary);
   }
+}
+
+.primaryOpt1 {
+  font-size: 16px;
+}
+
+.primaryOpt2 {
+  font-size: 20px;
 }
 
 .primarySmall {

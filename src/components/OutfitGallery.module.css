@@ -1,0 +1,101 @@
+.outfitGallery {
+  background-color: var(--color-bg--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.outfitGalleryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px;
+}
+
+@media (min-width: 560px) {
+  .outfitGalleryContainer {
+    margin: 0 40px;
+  }
+}
+
+@media (min-width: 760px) {
+  .outfitGalleryContainer {
+    margin: 0 80px;
+  }
+}
+
+@media (min-width: 960px) {
+  .outfitGalleryContainer {
+    margin: 0 140px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .outfitGalleryContainer {
+    margin: 0 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .outfitGalleryContainer {
+    margin: 0 280px;
+  }
+}
+
+.outfitGalleryTitle {
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: var(--color-bg--tertiary);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 4px 40px;
+  position: relative;
+  border-radius: 5px;
+  width: 260px;
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.outfitGalleryTitle::before,
+.outfitGalleryTitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background-color: var(--color-bg--primary);
+}
+
+.outfitGalleryTitle::before {
+  left: 0;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.outfitGalleryTitle::after {
+  right: 0;
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+.outfitGalleryContent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.ogImage {
+  width: 225px;
+  height: 241px;
+  border-radius: 8px;
+}
+
+.spacer {
+  height: 28px;
+}
+
+.spacer2 {
+  height: 16px;
+}

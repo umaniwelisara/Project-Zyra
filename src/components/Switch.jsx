@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./Switch.module.css";
 
-const Switch = ({ onText, offText, onChange }) => {
-  const [isOn, setIsOn] = useState(false);
+const Switch = ({ isOn, onText, offText, onChange }) => {
   const [sliderWidth, setSliderWidth] = useState(0);
 
   const onTextRef = useRef(null);
@@ -16,18 +15,6 @@ const Switch = ({ onText, offText, onChange }) => {
       setSliderWidth(activeLabelWidth);
     }
   }, [isOn]);
-
-  const toggleSwitch = () => {
-    setIsOn((prev) => {
-      const newState = !prev;
-
-      if (onChange) {
-        onChange(newState);
-      }
-
-      return newState;
-    });
-  };
 
   useEffect(() => {
     const handleFontLoad = () => {
@@ -51,13 +38,19 @@ const Switch = ({ onText, offText, onChange }) => {
     calculateWidths();
   }, [isOn, calculateWidths]);
 
+  const toggleSwitch = () => {
+    if (onChange) {
+      onChange(isOn);
+    }
+  };
+
   return (
     <div className={styles.switch} onClick={toggleSwitch}>
       <div
         className={styles.slider}
         style={{
           transform: isOn
-            ? `translateX(${onTextRef.current.offsetWidth}px)`
+            ? `translateX(${onTextRef?.current?.offsetWidth}px)`
             : "translateX(0)",
           width: `${sliderWidth}px`,
         }}

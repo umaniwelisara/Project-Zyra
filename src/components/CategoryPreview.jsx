@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./CategoryPreview.module.css";
 import ProductList from "./ProductList";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import AgeGroupContext from "../context/AgeGroupContext";
+import { AG1 } from "../constants";
 
 const CategoryPreview = ({
   id,
@@ -13,6 +15,7 @@ const CategoryPreview = ({
   hasSubCategories,
 }) => {
   const navigate = useNavigate();
+  const { ageGroup } = useContext(AgeGroupContext);
 
   const handleViewAll = () => {
     if (id === "shop-by-product") {
@@ -27,9 +30,16 @@ const CategoryPreview = ({
         backgroundColor: bgColor,
       }}
     >
-      <h3 className={styles.categoryName}>{name}</h3>
+      <h3
+        className={
+          ageGroup == AG1 ? styles.categoryNameOpt1 : styles.categoryNameOpt2
+        }
+      >
+        {name}
+      </h3>
 
       <ProductList
+        ageGroup={ageGroup}
         products={products}
         customStyles={customStyles}
         hasSubCategories={hasSubCategories}

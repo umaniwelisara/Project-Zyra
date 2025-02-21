@@ -1,6 +1,5 @@
 .paymentMethods {
-  height: 64px;
-  background-color: var(--color-bg--secondary);
+  background-color: var(--color-bg--primary);
   display: flex;
   align-items: center;
   justify-content: center;

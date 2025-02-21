@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 
 import styles from "./Products.module.css";
-import SettingsBar from "../components/SettingsBar";
-import NavigationBar from "../components/NavigationBar";
+
 import PaymentMethods from "../components/PaymentMethods";
 import Footer from "../components/Footer";
 import FiltersSummary from "../components/FiltersSummary";
-import AnnouncementBanner from "../components/AnnouncementBanner";
 import FiltersBar from "../components/FiltersBar";
 import ProductsGrid from "../components/ProductsGrid";
 import allProductsData from "../allproducts.json";
@@ -60,10 +58,6 @@ const Products = () => {
 
   return (
     <main className={styles.products}>
-      <SettingsBar />
-      <NavigationBar />
-      <AnnouncementBanner />
-
       <FiltersSummary
         filters={filters}
         onFilterRemove={handleFilterRemove}

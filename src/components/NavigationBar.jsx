@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import IconButton from "./IconButton";
 import styles from "./NavigationBar.module.css";
 import { useNavigate } from "react-router-dom";
+import AgeGroupContext from "../context/AgeGroupContext";
+import { AG1 } from "../constants";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
+  const { ageGroup } = useContext(AgeGroupContext);
+
   return (
     <section className={styles.navbar}>
       <div className={styles.navContent}>
@@ -35,7 +39,9 @@ const NavigationBar = () => {
       </div>
 
       <div className={styles.navActions}>
-        <IconButton size="L" iconUrl="/closet.svg" label="Outfit Gallery" />
+        {ageGroup === AG1 && (
+          <IconButton size="L" iconUrl="/closet.svg" label="Outfit Gallery" />
+        )}
         <IconButton size="L" iconUrl="/bag.svg" label="Bag" />
         <IconButton size="L" iconUrl="/favorites.svg" label="Favorites" />
         <IconButton size="L" iconUrl="/sign-in.svg" label="Sign In" />
