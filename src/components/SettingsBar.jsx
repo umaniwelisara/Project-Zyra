@@ -32,11 +32,7 @@ const SettingsBar = () => {
       <div className={styles.settingsSection}>
         {!isYouthful && (
           <>
-            <IconButton
-              iconUrl="/change-text.svg"
-              label="Contrast"
-              size="WIDE"
-            />
+            <IconButton iconUrl="/contrast.svg" label="Contrast" size="WIDE" />
             <VerticalLine />
             <IconButton
               iconUrl="/change-text.svg"

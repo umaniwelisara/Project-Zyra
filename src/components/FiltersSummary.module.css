@@ -12,6 +12,43 @@
   z-index: 10;
 }
 
+.filtersbarOpt2 {
+  height: 211px;
+  gap: 0;
+  justify-content: center;
+}
+
+.filtersGridContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.filtersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 46px;
+  row-gap: 18px;
+}
+
+.filterActionsContainer {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+}
+
+.hideFilters {
+  position: absolute;
+  right: -210px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
 .main {
   display: flex;
   flex-direction: row;

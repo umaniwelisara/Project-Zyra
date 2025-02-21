@@ -27,6 +27,11 @@
   height: 250px;
 }
 
+.imgOpt2ProdPage img {
+  width: 340px;
+  height: 360px;
+}
+
 .tags {
   position: absolute;
   display: flex;

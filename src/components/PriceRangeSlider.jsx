@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import styles from "./PriceRangeSlider.module.css";
 
-const PriceRangeSlider = ({ min, max, selectedRange, onChange }) => {
+const PriceRangeSlider = ({
+  min,
+  max,
+  selectedRange,
+  onChange,
+  isProductsPage,
+}) => {
   const [range, setRange] = useState(selectedRange ?? [min, max]);
 
   useEffect(() => {
@@ -39,7 +45,9 @@ const PriceRangeSlider = ({ min, max, selectedRange, onChange }) => {
         <div className={styles.track}></div>
         {/* Progress Line Between Dots */}
         <div
-          className={styles.progress}
+          className={`${styles.progress} ${
+            isProductsPage ? styles.progressB : ""
+          }`}
           style={{ left: `${left}%`, width: `${right - left}%` }}
         ></div>
 
@@ -52,7 +60,7 @@ const PriceRangeSlider = ({ min, max, selectedRange, onChange }) => {
           onChange={(e) => handleChange(e, 0)}
           onMouseUp={handleRelease}
           onTouchEnd={handleRelease}
-          className={styles.slider}
+          className={`${styles.slider} ${isProductsPage ? styles.sliderB : ""}`}
         />
         <input
           type="range"
@@ -62,7 +70,7 @@ const PriceRangeSlider = ({ min, max, selectedRange, onChange }) => {
           onChange={(e) => handleChange(e, 1)}
           onMouseUp={handleRelease}
           onTouchEnd={handleRelease}
-          className={styles.slider}
+          className={`${styles.slider} ${isProductsPage ? styles.sliderB : ""}`}
         />
       </div>
       <div className={styles.priceValues}>

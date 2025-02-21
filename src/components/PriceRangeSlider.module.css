@@ -30,6 +30,10 @@
   z-index: 2;
 }
 
+.progressB {
+  background: var(--color-bg--tertiary) !important;
+}
+
 /* Slider Inputs */
 .slider {
   -webkit-appearance: none;
@@ -55,6 +59,12 @@
   pointer-events: auto;
   position: relative;
   z-index: 4; /* Ensures dots appear above the track */
+}
+
+.sliderB::-webkit-slider-thumb {
+  background: var(--color-bg--tertiary) !important;
+  width: 25px;
+  height: 25px;
 }
 
 .priceValues {

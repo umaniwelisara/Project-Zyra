@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Product.module.css";
 import { AG1 } from "../constants";
 
-const Product = ({ product, hasSubCategories, ageGroup }) => {
+const Product = ({ product, hasSubCategories, ageGroup, isProductsPage }) => {
   const tags = [];
 
   if (product.tag) {
@@ -17,7 +17,11 @@ const Product = ({ product, hasSubCategories, ageGroup }) => {
     <div className={styles.product}>
       <div
         className={`${styles.productImage} ${
-          ageGroup == AG1 ? styles.imgOpt1 : styles.imgOpt2
+          ageGroup == AG1
+            ? styles.imgOpt1
+            : isProductsPage
+            ? styles.imgOpt2ProdPage
+            : styles.imgOpt2
         }`}
       >
         {tags.length > 0 && (

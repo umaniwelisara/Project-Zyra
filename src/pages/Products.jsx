@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import styles from "./Products.module.css";
 
@@ -8,8 +8,13 @@ import FiltersSummary from "../components/FiltersSummary";
 import FiltersBar from "../components/FiltersBar";
 import ProductsGrid from "../components/ProductsGrid";
 import allProductsData from "../allproducts.json";
+import AgeGroupContext from "../context/AgeGroupContext";
+import { AG1 } from "../constants";
 
 const Products = () => {
+  const { ageGroup } = useContext(AgeGroupContext);
+  const isYouthful = ageGroup === AG1;
+
   const [filters, setFilters] = useState({
     type: [],
     price: [],
@@ -59,20 +64,30 @@ const Products = () => {
   return (
     <main className={styles.products}>
       <FiltersSummary
+        isYouthful={isYouthful}
         filters={filters}
         onFilterRemove={handleFilterRemove}
         onClearAll={handleClearAll}
       />
 
-      <section className={styles.content}>
-        <FiltersBar
-          products={allProductsData.products}
-          filters={filters}
-          onFilterChange={handleFilterChange}
-        />
+      <section
+        className={styles.content}
+        style={!isYouthful ? { justifyContent: "center" } : {}}
+      >
+        {isYouthful && (
+          <FiltersBar
+            products={allProductsData.products}
+            filters={filters}
+            onFilterChange={handleFilterChange}
+          />
+        )}
 
         {filteredProducts.length > 0 ? (
-          <ProductsGrid products={filteredProducts} />
+          <ProductsGrid
+            products={filteredProducts}
+            ageGroup={ageGroup}
+            filters={filters}
+          />
         ) : (
           <div className={styles.noProducts}>
             <p>No products found.</p>
